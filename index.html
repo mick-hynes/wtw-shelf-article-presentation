@@ -1,26 +1,65 @@
 <!doctype html>
 <html>
-<head>
-<title>WTW Shelf GEM Presentation</title>
-<meta name="description" content="WTW Shelf GEM Presentation">
+  <head>
+    <title>WTW Shelf GEM Presentation</title>
+    <meta name="description" content="WTW Shelf GEM Presentation">
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/e/e9/Logo_WTW.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-<script type="text/javascript" charset="utf-8">
-    (function (g, e, n, es, ys) {
-      g['_genesysJs'] = e;
-      g[e] = g[e] || function () {
-        (g[e].q = g[e].q || []).push(arguments)
-      };
-      g[e].t = 1 * new Date();
-      g[e].c = es;
-      ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
-    })(window, 'Genesys', 'https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js', {
-      environment: 'prod-euw1',
-      deploymentId: '1c834886-ca8d-4c8f-aa87-3b602d589af9'
-    });
-  </script>
+    <script type="text/javascript" charset="utf-8">
+      (function (g, e, n, es, ys) {
+        g['_genesysJs'] = e;
+        g[e] = g[e] || function () {
+          (g[e].q = g[e].q || []).push(arguments)
+        };
+        g[e].t = 1 * new Date();
+        g[e].c = es;
+        ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+      })(window, 'Genesys', 'https://apps.euw2.pure.cloud/genesys-bootstrap/genesys.min.js', {
+        environment: 'prod-euw2',
+        deploymentId: '79f214dc-5660-46a9-9c3d-8dd09d615af3' // 'c4b445e5-8277-4bde-b8de-982d4214b893'
+      });
+    </script>
 
-</head>
-<body>
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Logo_WTW.png">
-</body>
+  </head>
+  <body style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e9/Logo_WTW.png')">
+    <main class="flex-shrink-0">
+    <div class="container" id="formContainer" style="display: none;">
+      <div class="mb-3">
+        <span class="text-body-secondary">v1.00</span>
+      </div>
+      <div class="mb-3">
+        <label for="memberForename" class="form-label">Forename</label>
+        <input type="text" class="form-control" id="memberForename" aria-describedby="forenameHelp">
+        <div id="forenameHelp" class="form-text">Member's Forename</div>
+      </div>
+      <div class="mb-3">
+        <label for="memberBGroup" class="form-label">BGROUP</label>
+        <input type="text" class="form-control" id="memberBGroup" value="BCL">
+      </div>
+      <div class="mb-3">
+        <label for="memberReferenceNumber" class="form-label">Reference Number</label>
+        <input type="number" class="form-control" id="memberReferenceNumber" value="0051600">
+      </div>
+      <div class="mb-3">
+        <label for="platform" class="form-label">Platform</label>
+        <input class="form-control" list="platforms" id="platform" placeholder="Type to search..." value="epa">
+        <datalist id="platforms">
+          <option value="epa">
+          <option value="assure">
+        </datalist>
+    </div>
+      <!-- <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div> -->
+      <button type="button" class="btn btn-primary" id="launchGenesys">Launch Messenger</button>
+    </div>  
+  </main>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="ttec.js?v=1.00"></script>
+    
+  </body>
 </html>
