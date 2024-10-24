@@ -38,13 +38,20 @@ function wireHandlers(){
   function launchGenesys() {
     console.log('Preparing Genesys Widget...');
 
+    var _env=$('#env').val();
+    if(_env=="PROD"){
+        _env="";
+    }
+
     Genesys('command', 'Database.set', {
       messaging: {
           customAttributes: {
               memberForename:  $('#memberForename').val(),
               bgroup: $('#memberBGroup').val(),
               referenceNumber: $('#memberReferenceNumber').val(),
-              platform: $('#platform').val()
+              platform: $('#platform').val(),
+              debugMode: $('#debugMode').val(),
+              env: _env
           },
       },
   })
