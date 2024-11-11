@@ -21,14 +21,14 @@
       });
     </script>
     
-    <link href="ttec.css?v=1.02" rel="stylesheet">
+    <link href="ttec.css?v=1.03" rel="stylesheet">
 
   </head>
   <body style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e9/Logo_WTW.png')">
     <main class="flex-shrink-0">
     <div class="container" id="formContainer" style="display: none;">
       <div class="mb-3">
-        <span class="text-body-secondary">v1.02</span>
+        <span class="text-body-secondary">v1.03</span>
       </div>
       <div class="mb-3">
         <label for="memberForename" class="form-label">Forename</label>
@@ -69,6 +69,15 @@
           <option value="Off"/>
         </datalist>
       </div>
+      <div class="mb-3">
+        <label for="deploymentPhase" class="form-label">Deployment Phase</label>
+        <input class="form-control" list="deploymentPhases" id="deploymentPhase" placeholder="Type to search..." value="1.1">
+        <datalist id="deploymentPhases">
+          <option value="1.1"/>
+          <option value="1.2"/>
+          <option value="2"/>
+        </datalist>
+      </div>
       <!-- <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -79,7 +88,7 @@
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="ttec.js?v=1.02"></script>
+    <script src="ttec.js?v=1.03"></script>
     
   </body>
 </html>

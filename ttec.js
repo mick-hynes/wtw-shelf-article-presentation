@@ -51,6 +51,7 @@ function wireHandlers(){
               referenceNumber: $('#memberReferenceNumber').val(),
               platform: $('#platform').val(),
               debugMode: $('#debugMode').val(),
+              deploymentPhase: $('#deploymentPhase').val(),
               env: _env
           },
       },
